@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#include "CANFD.hpp"
+#include "CCAN.hpp"
 #include "FullColorLED.hpp"
 #include "fdcan.h"
 
@@ -20,27 +20,25 @@ void CANFD::start(){
 }
 
 bool CANFD::tx(CANFD_Frame &tx_data){
-	FDCAN_TxHeaderTypeDef	TxHeader;
-	TxHeader.Identifier = tx_data.id;
-	TxHeader.IdType = FDCAN_STANDARD_ID;
-	TxHeader.TxFrameType = tx_data.is_remote ? FDCAN_REMOTE_FRAME : FDCAN_DATA_FRAME;
-	TxHeader.DataLength = len2dlc(tx_data.size);
-	TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
-	TxHeader.BitRateSwitch = FDCAN_BRS_ON;
-	TxHeader.FDFormat = FDCAN_FD_CAN;
-	TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
-	TxHeader.MessageMarker = 0;
+    FDCAN_TxHeaderTypeDef TxHeader;
+    TxHeader.Identifier = tx_data.id;
+    TxHeader.IdType = FDCAN_EXTENDED_ID;           // ★ STANDARD から EXTENDED (29bit) へ
+    TxHeader.TxFrameType = tx_data.is_remote ? FDCAN_REMOTE_FRAME : FDCAN_DATA_FRAME;
+    TxHeader.DataLength = len2dlc(tx_data.size);
+    TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+    TxHeader.BitRateSwitch = FDCAN_BRS_OFF;         // ★ Classic CANのためOFF
+    TxHeader.FDFormat = FDCAN_CLASSIC_CAN;          // ★ FD_CAN から CLASSIC_CAN へ
+    TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+    TxHeader.MessageMarker = 0;
 
-	// Prepare first Tx data for fdcan1
-	for (size_t i = 0; i < tx_data.size; i++) {
-		TxData[i] = tx_data.data[i];
-	}
+    for (size_t i = 0; i < tx_data.size; i++) {
+        TxData[i] = tx_data.data[i];
+    }
 
-	// Put Tx data to Txfifo
-	if (HAL_FDCAN_AddMessageToTxFifoQ(fdcan_, &TxHeader, TxData)!= HAL_OK) {
-		Error_Handler();
-	}
-	return true;
+    if (HAL_FDCAN_AddMessageToTxFifoQ(fdcan_, &TxHeader, TxData) != HAL_OK) {
+        return false;
+    }
+    return true;
 }
 
 uint32_t CANFD::rx_available(void){
@@ -84,16 +82,15 @@ bool CANFD::rx(CANFD_Frame &rx_frame){
 	}
 }
 
-void CANFD::set_filter_mask(uint8_t index, uint32_t id,uint32_t mask){
-	filter_.IdType = FDCAN_STANDARD_ID;
-	filter_.FilterIndex = index;
-	filter_.FilterType = FDCAN_FILTER_MASK;
-	filter_.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
-	filter_.FilterID1 = id;
-	filter_.FilterID2 = mask;
+void CANFD::set_filter_mask(uint8_t index, uint32_t id, uint32_t mask){
+    filter_.IdType = FDCAN_EXTENDED_ID;             // ★ EXTENDED_ID に変更
+    filter_.FilterIndex = index;
+    filter_.FilterType = FDCAN_FILTER_MASK;
+    filter_.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
+    filter_.FilterID1 = id;                         // 比較するID
+    filter_.FilterID2 = mask;                       // マスク (1のbitを完全一致判定)
 
-	if (HAL_FDCAN_ConfigFilter(fdcan_, &filter_) != HAL_OK)
-	{
-		Error_Handler();
-	}
+    if (HAL_FDCAN_ConfigFilter(fdcan_, &filter_) != HAL_OK) {
+        Error_Handler();
+    }
 }

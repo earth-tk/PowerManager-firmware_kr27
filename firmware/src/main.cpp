@@ -8,16 +8,17 @@
 #include "adc.h"
 #include "tim.h"
 
-#include "CANFD.hpp"
+#include "CCAN.hpp"
 #include "FullColorLED.hpp"
 #include "WS2812B.hpp"
 #include "stm32g4xx_hal_gpio.h"
 
-#include "ID_format.h"
-#include "PWRManager_format.h"
+#include "PowerBoard_Format.h"
+
+constexpr uint8_t MY_BOARD_NUM = 0x02;
 
 extern DMA_HandleTypeDef hdma_tim2_ch1;
-CANFD* canfd;
+CANFD *canfd;
 FullColorLED led{&htim1, TIM_CHANNEL_1};
 WS2812B status_LED{&htim2, TIM_CHANNEL_1, &hdma_tim2_ch1};
 int data;
@@ -30,15 +31,14 @@ bool onoff = false;
 bool discharge = false;
 bool emengecy = false;
 
-#define MCP3208_CS_LOW()  HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_RESET)
+#define MCP3208_CS_LOW() HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_RESET)
 #define MCP3208_CS_HIGH() HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_SET)
 
-#define MCP3208_START_BIT   0x04
+#define MCP3208_START_BIT 0x04
 #define MCP3208_MODE_SINGLE 0x02
-#define MCP3208_MODE_DIFF   0x00
+#define MCP3208_MODE_DIFF 0x00
 
 uint16_t ADC_buff[3];
-ID  own_id;
 
 float output_voltage = 0.0f;
 int rx_time = 0;
@@ -74,10 +74,11 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
   }
 }
 
-
-void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs) {
-  if((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET) {
-	  canfd->rx_interrupt_task();
+void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
+{
+  if ((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
+  {
+    canfd->rx_interrupt_task();
   }
 }
 
@@ -88,10 +89,12 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     if (HAL_GPIO_ReadPin(EMENGECY_GPIO_Port, EMENGECY_Pin) == GPIO_PIN_RESET)
     {
       HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
-      if (onoff) 
+      if (onoff)
       {
         led.set_rgb(0, 255, 0);
-      } else{
+      }
+      else
+      {
         led.set_rgb(255, 0, 0);
       }
       emengecy = false;
@@ -110,25 +113,9 @@ extern "C" void StartDefaultTask(void *argument)
 {
 
   canfd = new CANFD(&hfdcan1);
-	canfd->start();
+  canfd->start();
 
-  own_id.fields.board_num = 0;
-  own_id.fields.priority = 0;
-  own_id.fields.data_type = DataType::POWERBOARD_COMMAND;
-  canfd->set_filter_mask(0, own_id.id, 0xff);
-
-  ID common_id{};
-  common_id.fields.board_num = 0;
-  common_id.fields.priority = 0;
-  common_id.fields.data_type = DataType::COMMON_COMMAND;
-  canfd->set_filter_mask(1, common_id.id, 0xff);
-
-  CANFD_Frame tx_frame;
-	tx_frame.id = own_id.id;
-	tx_frame.is_remote = true;
-	canfd->tx(tx_frame);
-
-  //while(!canfd->rx_available()) osDelay(100);
+  // while(!canfd->rx_available()) osDelay(100);
   led.set_rgb(255, 0, 0);
   led.start();
 
@@ -137,42 +124,98 @@ extern "C" void StartDefaultTask(void *argument)
   HAL_ADC_Start_DMA(&hadc1, (uint32_t *)ADC_buff, sizeof(ADC_buff) / sizeof(ADC_buff[0]));
   hdma_adc1.Instance->CCR &= ~(DMA_IT_TC | DMA_IT_HT);
 
+  // 自身宛て (Data Type = 0x02, Board Num = 自身の基板番号)
+  uint32_t own_filter_id = can_format::make_can_id(0, can_format::DATA_TYPE_POWER_BOARD, MY_BOARD_NUM, 0);
+  uint32_t own_filter_mask = 0x00FF0000; // Data Type と Board Num の8bitを厳密に一致させるマスク
+  canfd->set_filter_mask(0, own_filter_id, own_filter_mask);
+
+  // ブロードキャスト共通コマンド (Data Type = 0x01)
+  uint32_t bcast_filter_id = can_format::make_can_id(0, can_format::DATA_TYPE_COMMON, 0x01, 0);
+  uint32_t bcast_filter_mask = 0x00FF0000;
+  canfd->set_filter_mask(1, bcast_filter_id, bcast_filter_mask);
+
   while (1)
   {
     if (canfd->rx_available())
     {
-      CANFD_Frame receive;
-      canfd->rx(receive);
+      CANFD_Frame frame;
+      canfd->rx(frame);
 
-      PWRTX_CANPacket packet;
-      memcpy(&packet, receive.data, receive.size);
-      if (packet.pwrstatus != onoff)
+      uint8_t dtype = can_format::get_data_type(frame.id);
+      uint16_t reg_id = can_format::get_register_id(frame.id);
+
+      // 非常停止（共通コマンド）
+      // 非常停止（共通コマンド: 0x01, REG_EMS: 0x0001）
+      if (dtype == can_format::DATA_TYPE_COMMON && reg_id == can_format::common::REG_EMS)
       {
-        onoff = packet.pwrstatus;
-        if (packet.pwrstatus)
+        bool ems_active = (frame.data[0] != 0);
+        if (ems_active)
         {
-          HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
-          osDelay(10);
-          HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_SET);
-          if (HAL_GPIO_ReadPin(EMENGECY_GPIO_Port, EMENGECY_Pin) == GPIO_PIN_SET)
-          {
-            led.set_rgb(100, 50, 0);
-          } else {
-		        led.set_rgb(0, 255, 0);
-          }
-	      } else {
-          
-          if (HAL_GPIO_ReadPin(EMENGECY_GPIO_Port, EMENGECY_Pin) == GPIO_PIN_SET)
-          {
-            led.set_rgb(100, 50, 0);
-          } else {
-            led.set_rgb(255, 0, 0);
-          }
-           HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_RESET);
+          // 【非常停止】MCON遮断、放電開始
+          HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_RESET);
           osDelay(30);
           HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_SET);
           osTimerStart(dischargeTimerHandle, 300);
-	      }
+          onoff = false;
+          emengecy = true;
+          led.set_rgb(255, 0, 0); // 赤色
+        }
+        else
+        {
+          // 【非常停止解除】物理スイッチが押されていないか確認して電源投入
+          if (HAL_GPIO_ReadPin(EMENGECY_GPIO_Port, EMENGECY_Pin) == GPIO_PIN_RESET)
+          {
+            HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET); // 放電停止
+            osDelay(10);
+            HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_SET); // ★ MCON ON！
+            onoff = true;
+            emengecy = false;
+            led.set_rgb(0, 255, 0); // 緑色
+          }
+          else
+          {
+            // 物理非常停止ボタンが押されている場合は投入しない
+            led.set_rgb(100, 50, 0); // オレンジ
+          }
+        }
+      }
+      // 電源基板向けコマンド
+      else if (dtype == can_format::DATA_TYPE_POWER_BOARD)
+      {
+        switch (reg_id)
+        {
+        case can_format::powerboard::REG_REQ_REMS_LED:
+        {
+          bool rems = (frame.data[0] != 0);
+          // 遠隔非常停止LED表示
+          break;
+        }
+        case can_format::powerboard::REG_REQ_STATE_LED_AUTOPILOT:
+        case can_format::powerboard::REG_REQ_STATE_LED_MANUAL:
+        case can_format::powerboard::REG_REQ_STATE_LED_GAMING:
+        case can_format::powerboard::REG_REQ_STATE_LED_PACHINKO:
+        {
+          // LEDパターンの変更（status_LED / WS2812B のモード切替）
+          break;
+        }
+        case can_format::powerboard::REG_SET_MONITOR_PERIOD:
+        {
+          uint16_t period_ms;
+          memcpy(&period_ms, frame.data, sizeof(period_ms));
+          if (period_ms > 0)
+          {
+            osTimerStop(cantx_taskHandle);
+            osTimerStart(cantx_taskHandle, period_ms);
+          }
+          else if (period_ms == 0)
+          {
+            osTimerStop(cantx_taskHandle); // 周期送信停止
+          }
+          break;
+        }
+        default:
+          break;
+        }
       }
       rx_time = HAL_GetTick();
     }
@@ -192,32 +235,46 @@ extern "C" void StartDefaultTask(void *argument)
 
 extern "C" void cantxCallback(void *argument)
 {
-  printf("%f %f %f\n", MCP3208_Read(2)/122.0, MCP3208_Read(1)/122.0, MCP3208_Read(0)/122.0);
-  float current = (ADC_buff[0] - 410) / 62.0;
+  // 1. センサ読み取り
+  float bat_v = MCP3208_Read(0) / 122.0f;      // 電圧
+  float current = (ADC_buff[0] - 410) / 62.0f; // 電流
+
   if (current > 20.0f)
   {
     HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_RESET);
+    onoff = false;
+  }
+  // 2. 電圧送信 (REG_GET_BAT_V: 0x0030)
+  {
+    CANFD_Frame tx_v;
+    tx_v.id = can_format::make_can_id(
+        can_format::PRIORITY_NORMAL,
+        can_format::DATA_TYPE_POWER_BOARD,
+        MY_BOARD_NUM,
+        can_format::powerboard::REG_GET_BAT_V);
+    tx_v.size = sizeof(float);
+    memcpy(tx_v.data, &bat_v, sizeof(float));
+    canfd->tx(tx_v);
   }
 
-  PWRX_CANPacket packet;
-  packet.current = current;
-  packet.battery1_voltage = MCP3208_Read(2)/122.0;
-  packet.battery2_voltage = MCP3208_Read(1)/122.0 - packet.battery1_voltage + 0.5;
-  packet.output_voltage = MCP3208_Read(0)/122.0;
-  output_voltage = packet.output_voltage;
-
-  CANFD_Frame send;
-  memcpy(send.data, &packet, sizeof(packet));
-  send.id = own_id.id;
-  send.size = sizeof(packet);
-  canfd->tx(send);
+  // 3. 電流送信 (REG_GET_CURRENT: 0x0031)
+  {
+    CANFD_Frame tx_i;
+    tx_i.id = can_format::make_can_id(
+        can_format::PRIORITY_NORMAL,
+        can_format::DATA_TYPE_POWER_BOARD,
+        MY_BOARD_NUM,
+        can_format::powerboard::REG_GET_CURRENT);
+    tx_i.size = sizeof(float);
+    memcpy(tx_i.data, &current, sizeof(float));
+    canfd->tx(tx_i);
+  }
 }
 
 extern "C" void dischargeCallback(void *argument)
 {
-    HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
 }
-
 
 void rainbow(int count, uint8_t *rgb)
 {
@@ -252,89 +309,23 @@ void rainbow(int count, uint8_t *rgb)
   }
 }
 
-
 int count = 0;
 
 extern "C" void controllLEDTask(void *argument)
 {
-  constexpr int led_num = 200;
-  for (int i = 0; i < led_num; i++)
+  enum class LedState
   {
-    status_LED.set_rgb(i, 0, 0, 0);
-  }
-  status_LED.show();
+    OFF,
+    AUTOPILOT,
+    MANUAL,
+    GAMING,
+    PACHINKO,
+    EMERGENCY
+  };
+  volatile LedState current_led_state = LedState::MANUAL;
+
   while (1)
   {
-    if (onoff && !emengecy){
-      for (int i = 0; i < led_num; i++)
-      {
-        uint8_t rgb[3];
-        // 高速で流れるレインボー
-        int led_count = (count + i * 24) % 1530;
-        rainbow(led_count, rgb);
-
-        // ネオン感は控えめに（過度な白飛びを防ぐ）
-        int r = rgb[0];
-        int g = rgb[1];
-        int b = (static_cast<int>(rgb[2]) * 115) / 100;
-        if (b > 255) b = 255;
-
-        // 明滅（0.67～0.94倍）
-        int t = (count * 2 + i * 9) % 510;
-        int pulse = (t < 255) ? t : (510 - t); // 0..255..0
-        int gain = 170 + (pulse * 70) / 255;
-
-        r = (r * gain) / 255;
-        g = (g * gain) / 255;
-        b = (b * gain) / 255;
-
-        // 全体輝度を抑えて白っぽさを回避
-        constexpr int master = 170;
-        r = (r * master) / 255;
-        g = (g * master) / 255;
-        b = (b * master) / 255;
-
-        // たまに青系スパークル
-        int sparkle = (i * 73 + count * 29) % 211;
-        if (sparkle < 3)
-        {
-          g += 20;
-          b += 40;
-          if (r > 255) r = 255;
-          if (g > 255) g = 255;
-          if (b > 255) b = 255;
-        }
-
-        status_LED.set_rgb(i, static_cast<uint8_t>(r), static_cast<uint8_t>(g), static_cast<uint8_t>(b));
-      }
-      status_LED.show();
-      count += 18;
-      if (count >= 1530)
-        count = 0;
-      osDelay(10);
-    } else {
-      if (emengecy)
-      {
-        for (int i = 0; i < led_num; i++)
-        {
-          status_LED.set_rgb(i, 200, 100, 0);
-        }
-        status_LED.show();
-        osDelay(100);
-        for (int i = 0; i < led_num; i++)
-        {
-          status_LED.set_rgb(i, 200, 0, 0);
-        }
-        status_LED.show();
-        osDelay(100);
-      } else {
-        for (int i = 0; i < led_num; i++)
-        {
-        status_LED.set_rgb(i, 0, 0, 0);
-        }
-        status_LED.show();
-        osDelay(100);
-      }
-    }
+    osDelay(100);
   }
 }

@@ -15,13 +15,13 @@ set(CMAKE_C_EXTENSIONS ON)
 set(Application_Src
     ${CMAKE_SOURCE_DIR}/firmware/src/main.cpp
     ${CMAKE_SOURCE_DIR}/firmware/src/FullColorLED.cpp
-    ${CMAKE_SOURCE_DIR}/firmware/src/CANFD.cpp
+    ${CMAKE_SOURCE_DIR}/firmware/src/CCAN.cpp
     ${CMAKE_SOURCE_DIR}/firmware/src/WS2812B.cpp
 )
 
 set(Include_Dirs
     ${CMAKE_SOURCE_DIR}/firmware/include
-    ${CMAKE_SOURCE_DIR}/firmware/format/include
+    ${CMAKE_SOURCE_DIR}/firmware/format/can_format_kr27/include
 )
 
 
@@ -33,8 +33,6 @@ endif()
 # Set the project name
 set(CMAKE_PROJECT_NAME PowerBoard_firmware)
 
-# Include toolchain file
-include("cmake/gcc-arm-none-eabi.cmake")
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)

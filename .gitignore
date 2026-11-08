@@ -3,6 +3,7 @@
 .mxproject
 *.launch
 /build/
+build/Debug
 /Drivers/
 /.vscode/
 .cache/
