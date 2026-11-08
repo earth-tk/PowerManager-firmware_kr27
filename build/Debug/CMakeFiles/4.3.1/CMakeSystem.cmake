@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Linux")
 set(CMAKE_HOST_SYSTEM_VERSION "7.0.0-42-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/home/hiyu/workspace/stm_farmware/PowerManager-firmware/cmake/gcc-arm-none-eabi.cmake")
+include("/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/cmake/gcc-arm-none-eabi.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")

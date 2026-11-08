@@ -5,7 +5,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_UNAME"
     description: "Path to a program."
@@ -76,10 +76,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -150,10 +150,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/uname"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/uname"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/uname"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/uname"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/uname"
+      - "/home/hiyu/.local/bin/uname"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/uname"
       - "/home/hiyu/anaconda3/condabin/uname"
-      - "/home/hiyu/.local/bin/uname"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/uname"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/uname"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/uname"
@@ -189,6 +189,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -212,7 +214,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:207 (message)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       The target system is: Generic -  - arm
       The host system is: Linux - 7.0.0-42-generic - x86_64
@@ -220,7 +222,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Program used to build from build.ninja files."
@@ -293,10 +295,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -496,6 +498,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -520,7 +524,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:67 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -591,10 +595,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -690,6 +694,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -717,7 +723,7 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -761,6 +767,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -786,11 +794,11 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
       Compiler: /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc 
-      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
+      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
       Id flags:  
       
       The output was:
@@ -830,7 +838,7 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -874,6 +882,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -899,11 +909,11 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc 
-      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
+      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
       Id flags: -c 
       
       The output was:
@@ -913,7 +923,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
       
       The C compiler identification is GNU, found in:
-        /home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/4.3.1/CompilerIdC/CMakeCCompilerId.o
+        /home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/4.3.1/CompilerIdC/CMakeCCompilerId.o
       
   -
     kind: "find-v1"
@@ -921,7 +931,7 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:58 (__resolve_tool_path)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -941,10 +951,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -986,6 +996,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1010,7 +1022,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -1031,10 +1043,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1076,6 +1088,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1100,7 +1114,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -1121,10 +1135,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1166,6 +1180,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1190,7 +1206,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -1211,10 +1227,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1256,6 +1272,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1280,7 +1298,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -1301,10 +1319,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1346,6 +1364,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1370,7 +1390,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -1391,10 +1411,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1436,6 +1456,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1460,7 +1482,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -1481,10 +1503,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1526,6 +1548,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1550,7 +1574,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -1571,10 +1595,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1594,10 +1618,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-dlltool"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-dlltool"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-dlltool"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-dlltool"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-dlltool"
+      - "/home/hiyu/.local/bin/arm-none-eabi-dlltool"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-dlltool"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-dlltool"
-      - "/home/hiyu/.local/bin/arm-none-eabi-dlltool"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-dlltool"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-dlltool"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-dlltool"
@@ -1616,10 +1640,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/dlltool"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/dlltool"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/dlltool"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/dlltool"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/dlltool"
+      - "/home/hiyu/.local/bin/dlltool"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/dlltool"
       - "/home/hiyu/anaconda3/condabin/dlltool"
-      - "/home/hiyu/.local/bin/dlltool"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/dlltool"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/dlltool"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/dlltool"
@@ -1661,6 +1685,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1685,7 +1711,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -1706,10 +1732,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1751,6 +1777,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1775,7 +1803,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -1796,10 +1824,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1819,10 +1847,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-tapi"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-tapi"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-tapi"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-tapi"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-tapi"
+      - "/home/hiyu/.local/bin/arm-none-eabi-tapi"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-tapi"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-tapi"
-      - "/home/hiyu/.local/bin/arm-none-eabi-tapi"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-tapi"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-tapi"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-tapi"
@@ -1841,10 +1869,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/tapi"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/tapi"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/tapi"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/tapi"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/tapi"
+      - "/home/hiyu/.local/bin/tapi"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/tapi"
       - "/home/hiyu/anaconda3/condabin/tapi"
-      - "/home/hiyu/.local/bin/tapi"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/tapi"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/tapi"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/tapi"
@@ -1886,6 +1914,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -1910,7 +1940,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1933,10 +1963,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -1956,10 +1986,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-14.3"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-14.3"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-14.3"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ar-14.3"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ar-14.3"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-14.3"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ar-14.3"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ar-14.3"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-14.3"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ar-14.3"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ar-14.3"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ar-14.3"
@@ -1978,10 +2008,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-14"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ar-14"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ar-14"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-14"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ar-14"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ar-14"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-14"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ar-14"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ar-14"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ar-14"
@@ -2000,10 +2030,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar14"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ar14"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ar14"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar14"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ar14"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ar14"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar14"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ar14"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ar14"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ar14"
@@ -2045,6 +2075,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -2069,7 +2101,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -2092,10 +2124,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -2115,10 +2147,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-14.3"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-14.3"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ranlib-14.3"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ranlib-14.3"
@@ -2137,10 +2169,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-14"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ranlib-14"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ranlib-14"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-14"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ranlib-14"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ranlib-14"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-14"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ranlib-14"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ranlib-14"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ranlib-14"
@@ -2159,10 +2191,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib14"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ranlib14"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ranlib14"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib14"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ranlib14"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ranlib14"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib14"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ranlib14"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ranlib14"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ranlib14"
@@ -2204,6 +2236,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -2228,7 +2262,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:71 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -2299,10 +2333,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -2398,6 +2432,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -2425,7 +2461,7 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -2469,6 +2505,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -2494,11 +2532,11 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
       Compiler: /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++ 
-      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
       Id flags:  
       
       The output was:
@@ -2538,7 +2576,7 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -2582,6 +2620,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -2607,11 +2647,11 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++ 
-      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-u;_printf_float;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
       Id flags: -c 
       
       The output was:
@@ -2621,14 +2661,14 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
       
       The CXX compiler identification is GNU, found in:
-        /home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/4.3.1/CompilerIdCXX/CMakeCXXCompilerId.o
+        /home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/4.3.1/CompilerIdCXX/CMakeCXXCompilerId.o
       
   -
     kind: "find-v1"
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -2651,10 +2691,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -2674,10 +2714,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-14.3"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-14.3"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-14.3"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ar-14.3"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ar-14.3"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-14.3"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ar-14.3"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ar-14.3"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-14.3"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ar-14.3"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ar-14.3"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ar-14.3"
@@ -2696,10 +2736,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-14"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ar-14"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ar-14"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-14"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ar-14"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ar-14"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-14"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ar-14"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ar-14"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ar-14"
@@ -2718,10 +2758,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar14"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ar14"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ar14"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar14"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ar14"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ar14"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar14"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ar14"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ar14"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ar14"
@@ -2763,6 +2803,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -2787,7 +2829,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -2810,10 +2852,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -2833,10 +2875,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-14.3"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-14.3"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ranlib-14.3"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ranlib-14.3"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ranlib-14.3"
@@ -2855,10 +2897,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-14"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ranlib-14"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ranlib-14"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-14"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ranlib-14"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ranlib-14"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-14"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ranlib-14"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ranlib-14"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ranlib-14"
@@ -2877,10 +2919,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib14"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib14"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ranlib14"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ranlib14"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib14"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ranlib14"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ranlib14"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib14"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ranlib14"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ranlib14"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ranlib14"
@@ -2922,6 +2964,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -2946,25 +2990,25 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/CMakeScratch/TryCompile-1b8jws"
-      binary: "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/CMakeScratch/TryCompile-1b8jws"
+      source: "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/CMakeScratch/TryCompile-1Qv7cv"
+      binary: "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/CMakeScratch/TryCompile-1Qv7cv"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_C_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections"
+      CMAKE_C_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections"
       CMAKE_C_FLAGS_DEBUG: "-O0 -g3"
       CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/CMakeScratch/TryCompile-1b8jws'
+        Change Dir: '/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/CMakeScratch/TryCompile-1Qv7cv'
         
-        Run Build Command(s): /home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_6a3e3
-        [1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj -c /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_417b9
+        [1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj -c /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc
         Target: arm-none-eabi
@@ -2972,8 +3016,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_6a3e3.dir/'
-         /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6a3e3.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o /tmp/ccArxtUL.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_417b9.dir/'
+         /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_417b9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o /tmp/ccyorlV0.s
         GNU C11 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -2990,13 +3034,13 @@ events:
          /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 91583cfdc8b970f823bfd284aa7769b4
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_6a3e3.dir/'
-         /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj /tmp/ccArxtUL.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_417b9.dir/'
+         /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj /tmp/ccyorlV0.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616
         COMPILER_PATH=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_6a3e3.a && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_6a3e3.a  CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_6a3e3.a && :
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_417b9.a && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_417b9.a  CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_417b9.a && :
         
       exitCode: 0
   -
@@ -3004,7 +3048,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
@@ -3024,15 +3068,15 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/CMakeScratch/TryCompile-1b8jws']
+        ignore line: [Change Dir: '/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/CMakeScratch/TryCompile-1Qv7cv']
         ignore line: []
-        ignore line: [Run Build Command(s): /home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_6a3e3]
-        ignore line: [[1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj -c /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_417b9]
+        ignore line: [[1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj -c /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc]
         ignore line: [Target: arm-none-eabi]
@@ -3040,8 +3084,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_6a3e3.dir/']
-        ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6a3e3.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o /tmp/ccArxtUL.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_417b9.dir/']
+        ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_417b9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o /tmp/ccyorlV0.s]
         ignore line: [GNU C11 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -3058,13 +3102,13 @@ events:
         ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 91583cfdc8b970f823bfd284aa7769b4]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_6a3e3.dir/']
-        ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj /tmp/ccArxtUL.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_417b9.dir/']
+        ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj /tmp/ccyorlV0.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616]
         ignore line: [COMPILER_PATH=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_6a3e3.a && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_6a3e3.a  CMakeFiles/cmTC_6a3e3.dir/CMakeCCompilerABI.c.obj && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_6a3e3.a && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_417b9.a && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_417b9.a  CMakeFiles/cmTC_417b9.dir/CMakeCCompilerABI.c.obj && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_417b9.a && :]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -3078,14 +3122,14 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7mqtT3"
-      binary: "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7mqtT3"
+      source: "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/CMakeScratch/TryCompile-QQX6Nb"
+      binary: "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/CMakeScratch/TryCompile-QQX6Nb"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
+      CMAKE_CXX_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
       CMAKE_CXX_FLAGS_DEBUG: "-O0 -g3"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
@@ -3094,10 +3138,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7mqtT3'
+        Change Dir: '/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/CMakeScratch/TryCompile-QQX6Nb'
         
-        Run Build Command(s): /home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_1a361
-        [1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj -c /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_f7a38
+        [1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj -c /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++
         Target: arm-none-eabi
@@ -3105,8 +3149,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_1a361.dir/'
-         /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1a361.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccSGhMHW.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f7a38.dir/'
+         /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f7a38.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccLqBF7Q.s
         GNU C++17 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -3129,13 +3173,13 @@ events:
          /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: c7a0cbb4c17df2df56ed6be1c1e04844
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_1a361.dir/'
-         /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccSGhMHW.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f7a38.dir/'
+         /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccLqBF7Q.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616
         COMPILER_PATH=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_1a361.a && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_1a361.a  CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_1a361.a && :
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_f7a38.a && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_f7a38.a  CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_f7a38.a && :
         
       exitCode: 0
   -
@@ -3143,7 +3187,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -3169,15 +3213,15 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/hiyu/workspace/stm_farmware/PowerManager-firmware/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7mqtT3']
+        ignore line: [Change Dir: '/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/build/Debug/CMakeFiles/CMakeScratch/TryCompile-QQX6Nb']
         ignore line: []
-        ignore line: [Run Build Command(s): /home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_1a361]
-        ignore line: [[1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj -c /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/ninja -v cmTC_f7a38]
+        ignore line: [[1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -u _printf_float -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj -c /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++]
         ignore line: [Target: arm-none-eabi]
@@ -3185,8 +3229,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_1a361.dir/']
-        ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1a361.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccSGhMHW.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f7a38.dir/']
+        ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi -D__USES_INITFINI__ /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f7a38.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccLqBF7Q.s]
         ignore line: [GNU C++17 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -3209,13 +3253,13 @@ events:
         ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: c7a0cbb4c17df2df56ed6be1c1e04844]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_1a361.dir/']
-        ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccSGhMHW.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f7a38.dir/']
+        ignore line: [ /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccLqBF7Q.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616]
         ignore line: [COMPILER_PATH=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_1a361.a && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_1a361.a  CMakeFiles/cmTC_1a361.dir/CMakeCXXCompilerABI.cpp.obj && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_1a361.a && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-u' '_printf_float' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/bin/cmake -E rm -f libcmTC_f7a38.a && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ar qc libcmTC_f7a38.a  CMakeFiles/cmTC_f7a38.dir/CMakeCXXCompilerABI.cpp.obj && /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-ranlib libcmTC_f7a38.a && :]
         ignore line: []
         ignore line: []
         linker tool for 'CXX': [1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++
@@ -3231,7 +3275,7 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Running the CXX compiler's linker: "[1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++" "-v"
       
@@ -3241,7 +3285,7 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Running the CXX compiler's linker: "[1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++" "-V"
       
@@ -3251,7 +3295,7 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:42 (project)"
+      - "CMakeLists.txt:43 (project)"
     message: |
       Running the CXX compiler's linker: "[1/2] /home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++" "--version"
       
@@ -3260,7 +3304,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:64 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:46 (enable_language)"
+      - "CMakeLists.txt:47 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -3331,10 +3375,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -3430,6 +3474,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -3457,7 +3503,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:1296 (message)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:46 (enable_language)"
+      - "CMakeLists.txt:47 (enable_language)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
       arm-none-eabi-gcc (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623
@@ -3470,7 +3516,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:46 (enable_language)"
+      - "CMakeLists.txt:47 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -3493,10 +3539,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -3516,10 +3562,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ar-"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ar-"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ar-"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ar-"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ar-"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ar-"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ar-"
@@ -3538,10 +3584,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ar-"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ar-"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ar-"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ar-"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ar-"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ar-"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ar-"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ar-"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ar-"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ar-"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ar-"
@@ -3583,6 +3629,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
@@ -3610,7 +3658,7 @@ events:
     backtrace:
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "/home/hiyu/.local/share/stm32cube/bundles/cmake/4.3.1+st.1/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:46 (enable_language)"
+      - "CMakeLists.txt:47 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -3633,10 +3681,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/"
+      - "/home/hiyu/.local/bin/"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/"
       - "/home/hiyu/anaconda3/condabin/"
-      - "/home/hiyu/.local/bin/"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/"
@@ -3656,10 +3704,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ranlib-"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ranlib-"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ranlib-"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ranlib-"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ranlib-"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ranlib-"
@@ -3678,10 +3726,10 @@ events:
       - "/home/hiyu/.local/share/stm32cube/bundles/ninja/1.13.2+st.1/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64/arm-none-eabi-gcc-ranlib-"
       - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64/arm-none-eabi-gcc-ranlib-"
-      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware/c/arm-none-eabi-gcc-ranlib-"
+      - "/home/hiyu/workspace/stm_farmware/PowerManager-firmware_kr27/c/arm-none-eabi-gcc-ranlib-"
+      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/hiyu/.nvm/versions/node/v22.23.4/bin/arm-none-eabi-gcc-ranlib-"
       - "/home/hiyu/anaconda3/condabin/arm-none-eabi-gcc-ranlib-"
-      - "/home/hiyu/.local/bin/arm-none-eabi-gcc-ranlib-"
       - "/opt/ros/jazzy/opt/gz_msgs_vendor/bin/arm-none-eabi-gcc-ranlib-"
       - "/opt/ros/jazzy/opt/gz_tools_vendor/bin/arm-none-eabi-gcc-ranlib-"
       - "/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin/arm-none-eabi-gcc-ranlib-"
@@ -3723,6 +3771,8 @@ events:
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.47.0-linux-x64/resources/cube-cmake/linux/x86_64"
         - "/home/hiyu/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.5.0-linux-x64/resources/binaries/linux/x86_64"
         - "c"
+        - "/home/hiyu/.local/bin"
+        - "/home/hiyu/.local/bin"
         - "/home/hiyu/.nvm/versions/node/v22.23.4/bin"
         - "/home/hiyu/anaconda3/condabin"
         - "/home/hiyu/.local/bin"
