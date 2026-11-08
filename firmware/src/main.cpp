@@ -1,29 +1,62 @@
 #include <cstring>
+
+#include "main.h"
+#include "cmsis_os2.h"
 #include "stdio.h"
-#include "math.h"
 
 #include "spi.h"
+#include "adc.h"
+#include "tim.h"
 
-#include "message.hpp"
 #include "CANFD.hpp"
 #include "FullColorLED.hpp"
 #include "WS2812B.hpp"
+#include "stm32g4xx_hal_gpio.h"
 
-#include "messageFormat/powerboard.hpp"
+#include "ID_format.h"
+#include "PWRManager_format.h"
 
 extern DMA_HandleTypeDef hdma_tim2_ch1;
-
-CANFD *canfd;
+CANFD* canfd;
 FullColorLED led{&htim1, TIM_CHANNEL_1};
 WS2812B status_LED{&htim2, TIM_CHANNEL_1, &hdma_tim2_ch1};
 int data;
-extern osTimerId_t dischargeTimerHandle;
-extern osTimerId_t WatchDogTaskHandle;
 
-bool ONOFF_flg = false;
-bool emengecy_flag = false;
-uint32_t last_receive = 0;
-uint8_t rgb;
+extern osTimerId_t dischargeTimerHandle;
+extern osTimerId_t cantx_taskHandle;
+extern DMA_HandleTypeDef hdma_adc1;
+
+bool onoff = false;
+bool discharge = false;
+bool emengecy = false;
+
+#define MCP3208_CS_LOW()  HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_RESET)
+#define MCP3208_CS_HIGH() HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_SET)
+
+#define MCP3208_START_BIT   0x04
+#define MCP3208_MODE_SINGLE 0x02
+#define MCP3208_MODE_DIFF   0x00
+
+uint16_t ADC_buff[3];
+ID  own_id;
+
+float output_voltage = 0.0f;
+int rx_time = 0;
+
+uint16_t MCP3208_Read(uint8_t channel)
+{
+  uint8_t tx[3];
+  uint8_t rx[3];
+  MCP3208_CS_LOW();
+  tx[0] = MCP3208_START_BIT | MCP3208_MODE_SINGLE | ((channel & 0x04) >> 2);
+  tx[1] = (channel & 0x03) << 6;
+  tx[2] = 0;
+  HAL_SPI_TransmitReceive(&hspi1, tx, rx, 3, HAL_MAX_DELAY);
+  MCP3208_CS_HIGH();
+  uint16_t value;
+  value = ((rx[1] & 0x0F) << 8) | rx[2];
+  return value;
+}
 
 void HAL_TIM_PWM_PulseFinishedHalfCpltCallback(TIM_HandleTypeDef *htim)
 {
@@ -41,39 +74,6 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
   }
 }
 
-void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
-{
-  if ((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
-  {
-    canfd->rx_interrupt_task();
-  }
-}
-#define MCP3208_CS_LOW()  HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_RESET)
-#define MCP3208_CS_HIGH() HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_SET)
-
-#define MCP3208_START_BIT   0x04
-#define MCP3208_MODE_SINGLE 0x02
-#define MCP3208_MODE_DIFF   0x00
-
-uint16_t MCP3208_Read(uint8_t channel)
-{
-  uint8_t tx[3];
-  uint8_t rx[3];
-  MCP3208_CS_LOW();
-
-  tx[0] = MCP3208_START_BIT | MCP3208_MODE_SINGLE | ((channel & 0x04) >> 2);
-  tx[1] = (channel & 0x03) << 6;
-  tx[2] = 0;
-
-  HAL_SPI_TransmitReceive(&hspi1, tx, rx, 3, HAL_MAX_DELAY);
-
-  MCP3208_CS_HIGH();
-
-  uint16_t value;
-  value = ((rx[1] & 0x0F) << 8) | rx[2];
-
-  return value;
-}
 
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs) {
   if((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET) {
@@ -83,149 +83,141 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-
-  if (GPIO_Pin == EMENGECY_Pin && ONOFF_flg)
+  if (GPIO_Pin == EMENGECY_Pin)
   {
     if (HAL_GPIO_ReadPin(EMENGECY_GPIO_Port, EMENGECY_Pin) == GPIO_PIN_RESET)
     {
       HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
-      led.set_rgb(0, 255, 0);
-      emengecy_flag = false;
-      rgb = 0;    }
+      if (onoff) 
+      {
+        led.set_rgb(0, 255, 0);
+      } else{
+        led.set_rgb(255, 0, 0);
+      }
+      emengecy = false;
+    }
     else
     {
       HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_SET);
       led.set_rgb(100, 50, 0);
-      rgb = 255;
-      emengecy_flag = true;
+      emengecy = true;
       osTimerStart(dischargeTimerHandle, 300);
     }
   }
 }
 
-void Relay_ONOFF(bool ONOFF)
-{
-  if (ONOFF && !emengecy_flag)
-  {
-    HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
-    osDelay(5);
-    if (HAL_GPIO_ReadPin(EMENGECY_GPIO_Port, EMENGECY_Pin))
-    {
-      led.set_rgb(100, 50, 0);
-    }
-    else
-    {
-      led.set_rgb(0, 255, 0);
-      rgb = 128;
-    }
-    HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_SET);
-    ONOFF_flg = true;
-  }
-  else
-  {
-    ONOFF_flg = false;
-    led.set_rgb(255, 0, 0);
-    rgb = 255;
-    HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_RESET);
-    osDelay(30);
-    HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_SET);
-    osTimerStart(dischargeTimerHandle, 300);
-  }
-}
-
 extern "C" void StartDefaultTask(void *argument)
 {
-  led.set_rgb(255, 0, 0);
-  led.start();
+
   canfd = new CANFD(&hfdcan1);
 	canfd->start();
-  //canfd->set_filter_mask(1048576, 0xFFC000);
-  
 
-  ID_Format filter_id;
-  filter_id.format.broadcast = true;
-  canfd->set_filter_mask(0, filter_id.id, filter_id.id);
+  own_id.fields.board_num = 0;
+  own_id.fields.priority = 0;
+  own_id.fields.data_type = DataType::POWERBOARD_COMMAND;
+  canfd->set_filter_mask(0, own_id.id, 0xff);
 
-  filter_id.id = 0;
-  filter_id.format.to_BoardType = Board_Type::PowerBoard;
-  filter_id.format.to_BoardID = 0;
-  canfd->set_filter_mask(1, filter_id.id, 0xFF);
+  ID common_id{};
+  common_id.fields.board_num = 0;
+  common_id.fields.priority = 0;
+  common_id.fields.data_type = DataType::COMMON_COMMAND;
+  canfd->set_filter_mask(1, common_id.id, 0xff);
 
-  CANFD_Frame test;
-  test.id = 10;
-  test.size = 32;
-  memset(test.data, 0, 64);
-  canfd->tx(test);
+  CANFD_Frame tx_frame;
+	tx_frame.id = own_id.id;
+	tx_frame.is_remote = true;
+	canfd->tx(tx_frame);
 
-  float ad;
-  osTimerStart(WatchDogTaskHandle, 500);
+  //while(!canfd->rx_available()) osDelay(100);
+  led.set_rgb(255, 0, 0);
+  led.start();
+
+  osTimerStart(cantx_taskHandle, 100);
+  HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)ADC_buff, sizeof(ADC_buff) / sizeof(ADC_buff[0]));
+  hdma_adc1.Instance->CCR &= ~(DMA_IT_TC | DMA_IT_HT);
 
   while (1)
   {
-    printf("%d %d\n", MCP3208_Read(2), MCP3208_Read(1));
     if (canfd->rx_available())
     {
-      CANFD_Frame data;
-      canfd->rx(data);
+      CANFD_Frame receive;
+      canfd->rx(receive);
 
-      ID_Format rsv_id;
-      rsv_id.id = data.id;
-      if (rsv_id.format.from_BoardType == Board_Type::Master_Board && rsv_id.format.message_type == Message_Type::Target)
+      PWRTX_CANPacket packet;
+      memcpy(&packet, receive.data, receive.size);
+      if (packet.pwrstatus != onoff)
       {
-        auto target = reinterpret_cast<PowerBoard_Target *>(&data.data);
-        Relay_ONOFF(target->ON_OFF);
-      }
-      else if (rsv_id.format.broadcast == true && rsv_id.format.message_type == Message_Type::EMENGECY)
-      {
-        if (data.data[0] == 1)
+        onoff = packet.pwrstatus;
+        if (packet.pwrstatus)
         {
-          emengecy_flag = true;
-          Relay_ONOFF(false);
-        }
-        else
-        {
-          emengecy_flag = false;
-          Relay_ONOFF(true);
-        }
+          HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
+          osDelay(10);
+          HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_SET);
+          if (HAL_GPIO_ReadPin(EMENGECY_GPIO_Port, EMENGECY_Pin) == GPIO_PIN_SET)
+          {
+            led.set_rgb(100, 50, 0);
+          } else {
+		        led.set_rgb(0, 255, 0);
+          }
+	      } else {
+          
+          if (HAL_GPIO_ReadPin(EMENGECY_GPIO_Port, EMENGECY_Pin) == GPIO_PIN_SET)
+          {
+            led.set_rgb(100, 50, 0);
+          } else {
+            led.set_rgb(255, 0, 0);
+          }
+           HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_RESET);
+          osDelay(30);
+          HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_SET);
+          osTimerStart(dischargeTimerHandle, 300);
+	      }
       }
-      last_receive = HAL_GetTick();
+      rx_time = HAL_GetTick();
     }
 
-    osDelay(10);
-  }
-}
-
-extern "C" void statusTaskFunc(void *argument)
-{
-  osDelay(1000);
-  for (;;)
-  {
-    float ad;
-    HAL_ADC_Start(&hadc1);
-    int adS = HAL_ADC_GetValue(&hadc1); 
-    if (HAL_ADC_PollForConversion(&hadc1, 1000) == HAL_OK)
+    if (HAL_GetTick() - rx_time > 1000)
     {
-	      ad = (HAL_ADC_GetValue(&hadc1) - 350) / 62.0;
-        //printf("test=%f\n", ad);
+      led.set_rgb(255, 0, 0);
+      HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_RESET);
+      osDelay(30);
+      HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_SET);
+      osTimerStart(dischargeTimerHandle, 300);
+      onoff = false;
     }
-    HAL_ADC_Stop(&hadc1);
-    PowerBoard_Status status = {0};
-    ID_Format id;
-    id.format.from_BoardID = 0;
-    id.format.from_BoardType = Board_Type::PowerBoard;
-    id.format.to_BoardID = 0;
-    id.format.to_BoardType = Board_Type::Master_Board;
-    id.format.message_type = Message_Type::Status;
-
-    status.Current = ad;
-    CANFD_Frame sendmsg;
-    sendmsg.id = id.id;
-    sendmsg.size = sizeof(PowerBoard_Status); 
-    memcpy(sendmsg.data, &status, sizeof(PowerBoard_Status));
-    canfd->tx(sendmsg);
     osDelay(10);
   }
 }
+
+extern "C" void cantxCallback(void *argument)
+{
+  printf("%f %f %f\n", MCP3208_Read(2)/122.0, MCP3208_Read(1)/122.0, MCP3208_Read(0)/122.0);
+  float current = (ADC_buff[0] - 410) / 62.0;
+  if (current > 20.0f)
+  {
+    HAL_GPIO_WritePin(ONOFF_GPIO_Port, ONOFF_Pin, GPIO_PIN_RESET);
+  }
+
+  PWRX_CANPacket packet;
+  packet.current = current;
+  packet.battery1_voltage = MCP3208_Read(2)/122.0;
+  packet.battery2_voltage = MCP3208_Read(1)/122.0 - packet.battery1_voltage + 0.5;
+  packet.output_voltage = MCP3208_Read(0)/122.0;
+  output_voltage = packet.output_voltage;
+
+  CANFD_Frame send;
+  memcpy(send.data, &packet, sizeof(packet));
+  send.id = own_id.id;
+  send.size = sizeof(packet);
+  canfd->tx(send);
+}
+
+extern "C" void dischargeCallback(void *argument)
+{
+    HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
+}
+
 
 void rainbow(int count, uint8_t *rgb)
 {
@@ -265,72 +257,84 @@ int count = 0;
 
 extern "C" void controllLEDTask(void *argument)
 {
-  constexpr int led_num = 64;
-  for (int i = 0; i < 64; i++)
+  constexpr int led_num = 200;
+  for (int i = 0; i < led_num; i++)
   {
     status_LED.set_rgb(i, 0, 0, 0);
   }
   status_LED.show();
   while (1)
   {
-    for (int i = 0; i < led_num; i++)
-    {
-      uint8_t rgb[3];
-      // 高速で流れるレインボー
-      int led_count = (count + i * 24) % 1530;
-      rainbow(led_count, rgb);
-
-      // ネオン感は控えめに（過度な白飛びを防ぐ）
-      int r = rgb[0];
-      int g = rgb[1];
-      int b = (static_cast<int>(rgb[2]) * 115) / 100;
-      if (b > 255) b = 255;
-
-      // 明滅（0.67～0.94倍）
-      int t = (count * 2 + i * 9) % 510;
-      int pulse = (t < 255) ? t : (510 - t); // 0..255..0
-      int gain = 170 + (pulse * 70) / 255;
-
-      r = (r * gain) / 255;
-      g = (g * gain) / 255;
-      b = (b * gain) / 255;
-
-      // 全体輝度を抑えて白っぽさを回避
-      constexpr int master = 170;
-      r = (r * master) / 255;
-      g = (g * master) / 255;
-      b = (b * master) / 255;
-
-      // たまに青系スパークル
-      int sparkle = (i * 73 + count * 29) % 211;
-      if (sparkle < 3)
+    if (onoff && !emengecy){
+      for (int i = 0; i < led_num; i++)
       {
-        g += 20;
-        b += 40;
-        if (r > 255) r = 255;
-        if (g > 255) g = 255;
+        uint8_t rgb[3];
+        // 高速で流れるレインボー
+        int led_count = (count + i * 24) % 1530;
+        rainbow(led_count, rgb);
+
+        // ネオン感は控えめに（過度な白飛びを防ぐ）
+        int r = rgb[0];
+        int g = rgb[1];
+        int b = (static_cast<int>(rgb[2]) * 115) / 100;
         if (b > 255) b = 255;
+
+        // 明滅（0.67～0.94倍）
+        int t = (count * 2 + i * 9) % 510;
+        int pulse = (t < 255) ? t : (510 - t); // 0..255..0
+        int gain = 170 + (pulse * 70) / 255;
+
+        r = (r * gain) / 255;
+        g = (g * gain) / 255;
+        b = (b * gain) / 255;
+
+        // 全体輝度を抑えて白っぽさを回避
+        constexpr int master = 170;
+        r = (r * master) / 255;
+        g = (g * master) / 255;
+        b = (b * master) / 255;
+
+        // たまに青系スパークル
+        int sparkle = (i * 73 + count * 29) % 211;
+        if (sparkle < 3)
+        {
+          g += 20;
+          b += 40;
+          if (r > 255) r = 255;
+          if (g > 255) g = 255;
+          if (b > 255) b = 255;
+        }
+
+        status_LED.set_rgb(i, static_cast<uint8_t>(r), static_cast<uint8_t>(g), static_cast<uint8_t>(b));
       }
-
-      status_LED.set_rgb(i, static_cast<uint8_t>(r), static_cast<uint8_t>(g), static_cast<uint8_t>(b));
+      status_LED.show();
+      count += 18;
+      if (count >= 1530)
+        count = 0;
+      osDelay(10);
+    } else {
+      if (emengecy)
+      {
+        for (int i = 0; i < led_num; i++)
+        {
+          status_LED.set_rgb(i, 200, 100, 0);
+        }
+        status_LED.show();
+        osDelay(100);
+        for (int i = 0; i < led_num; i++)
+        {
+          status_LED.set_rgb(i, 200, 0, 0);
+        }
+        status_LED.show();
+        osDelay(100);
+      } else {
+        for (int i = 0; i < led_num; i++)
+        {
+        status_LED.set_rgb(i, 0, 0, 0);
+        }
+        status_LED.show();
+        osDelay(100);
+      }
     }
-    status_LED.show();
-    count += 18;
-    if (count >= 1530)
-      count = 0;
-    osDelay(10);
   }
-}
-
-extern "C" void WatchDogCallback(void *argument)
-{
-  if (HAL_GetTick() - last_receive > 2000)
-  {
-    Relay_ONOFF(false);
-  }
-}
-
-extern "C" void dischargeCallback(void *argument)
-{
-  HAL_GPIO_WritePin(DISCHARGE_GPIO_Port, DISCHARGE_Pin, GPIO_PIN_RESET);
 }

@@ -67,4 +67,3 @@ void WS2812B::show(){
 }
 
 /* USER CODE BEGIN 0 */
-
