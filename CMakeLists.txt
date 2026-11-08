@@ -21,6 +21,7 @@ set(Application_Src
 
 set(Include_Dirs
     ${CMAKE_SOURCE_DIR}/firmware/include
+    ${CMAKE_SOURCE_DIR}/firmware/format/include
 )
 
 

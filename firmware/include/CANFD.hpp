@@ -46,4 +46,11 @@ public:
            (byte <= 32) ? (byte - 24 + 7) / 8 + 12 :
            (byte - 32 + 15) / 16 + 13;
 	}
+	
+	uint8_t dlc2len(uint32_t dlc)
+	{
+    	static const uint8_t dlc_to_len[16] = {0,1,2,3,4,5,6,7,9,12,16, 20,24,32,48,64};
+    	if (dlc > 15) return 0;
+    	return dlc_to_len[dlc];
+	}
 };

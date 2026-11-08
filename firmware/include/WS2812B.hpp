@@ -11,7 +11,7 @@ private:
 
     #define HIGH 13//ビット値1
     #define LOW 7 //ビット値0
-    #define NUM_PIXELS 64 //NeoPixelの数
+    #define NUM_PIXELS 200 //NeoPixelの数
 
     uint8_t rgb_buf[NUM_PIXELS][3]; //色データの配列。1つのNeoPixelにつきGRBの3色分のデータがあります。
     uint32_t pwm_buf[48]={0}; //PWM配列
